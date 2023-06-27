@@ -135,7 +135,7 @@ namespace DemoLibrary.UnitTests.Services
 
 ## Run the tests
 
-** *Note that this first run will fail on purpose!**
+**Note that this first run will fail on purpose!**
 
 * Run this command:
 
@@ -143,7 +143,7 @@ namespace DemoLibrary.UnitTests.Services
 dotnet test
 ```
 
-** Note the failure, because of this line:
+**Note the failure, because of this line:**
 
 ```cs
 throw new NotImplementedException("Please create a test first.");
