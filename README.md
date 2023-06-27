@@ -61,4 +61,5 @@ To verify that it was install properly, inspect the *.csproj file for an entry l
 * [Installation | NUnit Docs ](https://docs.nunit.org/articles/nunit/getting-started/installation.html)
 * [How to use Microsoft Dev Containers (Visual Studio Code, Python)](https://scriptable.com/how-to-use-microsoft-dev-containers-python/)
 * [How to Install Dotnet on a Mac (.NET, CSharp)](https://scriptable.com/how-to-install-dotnet-on-a-mac/)
+* [.NET Core - When to use "dotnet new sln"](https://stackoverflow.com/questions/42730877/net-core-when-to-use-dotnet-new-sln)
 
