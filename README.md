@@ -172,6 +172,38 @@ dotnet test
 ```
 * Verify everything passed
 
+## Add more test cases
+
+Add this to the test suite:
+
+```cs
+[TestCase(1)]
+[TestCase(5)]
+[TestCase(13)]
+public void IsOdd_InputOddNumbers_ReturnTrue(int candidate)
+{
+    var result = _demoService?.IsOddNumber(candidate);
+
+    Assert.IsTrue(result, "Value should be odd number");
+}
+```
+
+## Add more test cases for even numbers
+
+Add these test cases to validate how it handles even numbers:
+
+```cs
+[TestCase(2)]
+[TestCase(6)]
+[TestCase(20)]
+public void IsOdd_InputEvenNumbers_ReturnFalse(int candidate)
+{
+    var result = _demoService?.IsOddNumber(candidate);
+
+    Assert.IsFalse(result, "Value should be even number");
+}
+```
+
 * * *
 
 ## References
