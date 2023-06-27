@@ -52,6 +52,56 @@ To verify that it was install properly, inspect the *.csproj file for an entry l
   </ItemGroup>
 ```
 
+## Add sln
+
+```sh
+dotnet new sln
+```
+
+## Add console project to solution
+
+```sh
+dotnet sln add ./csharp-nunit-101.csproj
+```
+
+## Make a library
+
+```sh
+dotnet new classlib -o DemoLibrary
+mv DemoLibrary/Class1.cs DemoLibrary/DemoLibrary.cs
+dotnet sln add DemoLibrary/DemoLibrary.csproj
+```
+
+* Edit DemoLibrary/DemoLibrary.cs
+* Change the code to this and save it:
+```cs
+/**
+Reference: 
+    https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit
+*/
+
+namespace DemoLibrary
+{
+    public class DemoLibrary
+    {
+        public bool IsPrime(int candidate)
+        {
+            throw new NotImplementedException("Please create a test first.");
+        }
+    }
+}
+```
+
+## Create NUnit package
+
+```sh
+dotnet new nunit -o DemoLibrary.Tests
+dotnet add DemoLibrary.Tests/DemoLibrary.Tests.csproj reference DemoLibrary/DemoLibrary.csproj
+dotnet sln add DemoLibrary.Tests/DemoLibrary.Tests.csproj
+```
+
+
+* * *
 
 ## References
 
@@ -62,4 +112,5 @@ To verify that it was install properly, inspect the *.csproj file for an entry l
 * [How to use Microsoft Dev Containers (Visual Studio Code, Python)](https://scriptable.com/how-to-use-microsoft-dev-containers-python/)
 * [How to Install Dotnet on a Mac (.NET, CSharp)](https://scriptable.com/how-to-install-dotnet-on-a-mac/)
 * [.NET Core - When to use "dotnet new sln"](https://stackoverflow.com/questions/42730877/net-core-when-to-use-dotnet-new-sln)
+* [Tutorial: Create a .NET class library using Visual Studio Code](https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio-code?pivots=dotnet-7-0)
 
