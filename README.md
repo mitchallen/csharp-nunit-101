@@ -102,7 +102,7 @@ dotnet sln add DemoLibrary.Tests/DemoLibrary.Tests.csproj
 * Change the file name:
 ```sh
 mv DemoLibrary.Tests/UnitTest1.cs DemoLibrary.Tests/DemoLibrary_IsOddShould.cs
-``
+```
 * Edit **DemoLibrary.Tests/DemoLibrary_IsOddShould.cs**:
 * Replace the contents with the code below and save it:
 ```cs
