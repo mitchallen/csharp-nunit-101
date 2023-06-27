@@ -84,7 +84,7 @@ namespace DemoLibrary
 {
     public class DemoLibrary
     {
-        public bool IsPrime(int candidate)
+        public bool IsOddNumber(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
         }
@@ -99,7 +99,78 @@ dotnet new nunit -o DemoLibrary.Tests
 dotnet add DemoLibrary.Tests/DemoLibrary.Tests.csproj reference DemoLibrary/DemoLibrary.csproj
 dotnet sln add DemoLibrary.Tests/DemoLibrary.Tests.csproj
 ```
+* Change the file name:
+```sh
+mv DemoLibrary.Tests/UnitTest1.cs DemoLibrary.Tests/DemoLibrary_IsOddShould.cs
+``
+* Edit **DemoLibrary.Tests/DemoLibrary_IsOddShould.cs**:
+* Replace the contents with the code below and save it:
+```cs
+using NUnit.Framework;
+using DemoLibrary;
 
+namespace DemoLibrary.UnitTests.Services
+{
+    [TestFixture]
+    public class DemoLibrary_IsOddhould
+    {
+        private DemoLibrary? _demoService;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _demoService = new DemoLibrary();
+        }
+
+        [Test]
+        public void IsOdd_InputIs1_ReturnTrue()
+        {
+            var result = _demoService?.IsOddNumber(1);
+
+            Assert.IsTrue(result, "Value should be odd number");
+        }
+    }
+}
+```
+
+## Run the tests
+
+** *Note that this first run will fail on purpose!**
+
+* Run this command:
+
+```sh
+dotnet test
+```
+
+** Note the failure, because of this line:
+
+```cs
+throw new NotImplementedException("Please create a test first.");
+```
+
+To fix that:
+* Open **DemoLibray/DemoLibray.cs**
+* Change the contents to the code below and save it the file:
+```cs
+namespace DemoLibrary
+{
+    public class DemoLibrary
+    {
+        public bool IsOddNumber(int candidate)
+        {
+            // throw new NotImplementedException("Please create a test first.");
+
+            return candidate % 2 != 0;
+        }
+    }
+}
+```
+* Run the test again:
+```sh
+dotnet test
+```
+* Verify everything passed
 
 * * *
 
