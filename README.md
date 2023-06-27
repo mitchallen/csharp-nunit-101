@@ -55,6 +55,7 @@ To verify that it was install properly, inspect the *.csproj file for an entry l
 
 ## References
 
+* [Unit testing C# with NUnit and .NET Core](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit)
 * [NuGet in Visual Studio Code](https://code.visualstudio.com/docs/csharp/package-management)
 * [Install and manage NuGet packages with the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli)
 * [Installation | NUnit Docs ](https://docs.nunit.org/articles/nunit/getting-started/installation.html)
