@@ -19,7 +19,7 @@ namespace DemoLibrary.UnitTests.Services
         {
             var result = _demoService?.IsOddNumber(1);
 
-            Assert.IsTrue(result, "Value should be odd number");
+            Assert.IsTrue(result, $"Value should be odd number");
         }
 
         [TestCase(1)]
@@ -29,7 +29,7 @@ namespace DemoLibrary.UnitTests.Services
         {
             var result = _demoService?.IsOddNumber(candidate);
 
-            Assert.IsTrue(result, "Value should be odd number");
+            Assert.IsTrue(result, $"Value {candidate} should be odd number");
         }
 
         [TestCase(2)]
@@ -39,7 +39,7 @@ namespace DemoLibrary.UnitTests.Services
         {
             var result = _demoService?.IsOddNumber(candidate);
 
-            Assert.IsFalse(result, "Value should be even number");
+            Assert.IsFalse(result, $"Value {candidate} should be even number");
         }
     }
 }
