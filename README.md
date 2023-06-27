@@ -72,7 +72,7 @@ mv DemoLibrary/Class1.cs DemoLibrary/DemoLibrary.cs
 dotnet sln add DemoLibrary/DemoLibrary.csproj
 ```
 
-* Edit DemoLibrary/DemoLibrary.cs
+* Edit **DemoLibrary/DemoLibrary.cs**
 * Change the code to this and save it:
 ```cs
 /**
