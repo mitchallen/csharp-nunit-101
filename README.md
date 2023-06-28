@@ -44,7 +44,7 @@ See references for more info on how to install **NUnit**.
 dotnet add package NUnit
 ```
 
-To verify that it was install properly, inspect the *.csproj file for an entry like this:
+To verify that it was installed properly, inspect the ***.csproj** file for an entry like this:
 
 ```xml
   <ItemGroup>
@@ -151,7 +151,7 @@ throw new NotImplementedException("Please create a test first.");
 
 To fix that:
 * Open **DemoLibray/DemoLibray.cs**
-* Change the contents to the code below and save it the file:
+* Change the contents to the code below and save the file:
 ```cs
 namespace DemoLibrary
 {
